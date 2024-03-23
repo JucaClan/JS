@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Validação de CPF</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Validação de CPF</h1>
+    <div class="form-group">
+      <label for="idade">CPF:</label>
+      <input type="number" onkeyup="validar_cpf()" class="form-control" id="cpf" placeholder="Digite seu CPF">
+    </div>
+    
+    <br><br>
+    <span id="resultado"></span>
+  </div>
+ 
+  <script>
+    function validar_cpf(){
+        if(cpf.value.length == 11){
+            resultado.textContent = "CPF válido";
+            resultado.style.color = "green";
+            cpf.style.borderColor = "green";
+        }else{
+            resultado.textContent = "CPF inválido";
+            resultado.style.color = "red";
+            cpf.style.borderColor = "red";
+        }
+
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Validação de Idade</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Validação de Idade</h1>
+    <div class="form-group">
+      <label for="idade">Idade:</label>
+      <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+    </div>
+    <button class="btn btn-primary" onclick="validar_idade()">Validar</button>
+    <br><br>
+    <span id="resultado"></span>
+  </div>
+ 
+  <script>
+    // Inserir o código javascript aqui:
+    // Pesquise sobre if else em javascript!
+    function validar_idade(){
+        var age = parseInt(idade.value);
+        resultado.style.fontWeight = "bold";
+        if(age >= 18){
+            resultado.textContent = "Você é maior de idade";
+            resultado.style.color = "green";
+        }
+        else{
+            resultado.textContent = "Você é menor de idade";
+            resultado.style.color = "red";
+        }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <p>
+        <label for="x">X: </label>
+        <input type="number" name="x" id="x">
+    </p>
+    <p>
+        <label for="y">Y: </label>
+        <input type="number" name="y" id="y">
+    </p>
+    <p>
+        <input type="button" value="Calcular" onclick="calcular()">
+    </p>
+    <p>
+        <span id="resultado"></span>
+    </p>
+
+
+   <script>
+
+    function calcular(){
+        // Obter os valores do campo:
+        var num1 = parseInt(x.value);
+        var num2 = parseInt(y.value);
+
+        resultado.textContent = num1 + num2;
+    }
+
+    function apresentar(){
+        resposta.textContent = "Olá querido jovem";
+        document.getElementById("resposta").textContent = "Olá querido jovem";
+    }
+
+
+   </script> 
+</body>
+</html>
